@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Love</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="index.js"></script>
+    
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="#">Apple Love</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#st">Store</a></li>
+        
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner"></div>
+  <div class="about" id="st">
+    <div class="content">
+      <section class="container content-section">
+        <h2 class="section-header">Iphones</h2>
+        <div class="shop-items">
+          <div class="shop-item">
+            <span class="shop-item-title">Iphone 5s</span>
+            <img class="shop-item-image" src="img/iphone 5s.png">
+            <div class="shop-item-details">
+              
+                <span class="shop-item-price" >300 Dt</span>
+                <i onclick="wishlist(this)" class="fa fa-heart"></i>
+                  
+               
+                
+                <button class="btn btn-primary shop-item-button "type="button">ADD TO CART</button>
+            </div>
+        </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Iphone 6</span>
+                <img class="shop-item-image" src="img/iphone 6.png">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">600 Dt</span>
+                   
+                    <i onclick="wishlist(this)" class="fa fa-heart"></i>
+                   
+                    
+                    <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Iphone 7</span>
+                <img class="shop-item-image" src="img/iphone 7.png">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">900 Dt</span>
+                    <i onclick="wishlist(this)" class="fa fa-heart"></i>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Iphone 8</span>
+                <img class="shop-item-image" src="img/iphone 8.png">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">1200 Dt</span>
+                    <i onclick="wishlist(this)" class="fa fa-heart"></i>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="shop-item">
+              <span class="shop-item-title">Iphone X</span>
+              <img class="shop-item-image" src="img/iphone x.png">
+              <div class="shop-item-details">
+                  <span class="shop-item-price">1500 Dt</span>
+                  <i onclick="wishlist(this)" class="fa fa-heart"></i>
+                  <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+              </div>
+          </div>
+          <div class="shop-item">
+            <span class="shop-item-title">Iphone Xs</span>
+            <img class="shop-item-image" src="img/iphone xs.png">
+            <div class="shop-item-details">
+                <span class="shop-item-price">2200 Dt</span>
+                <i onclick="wishlist(this)" class="fa fa-heart"></i>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="container content-section">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+          
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">0 Dt</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+    </section>
+ 
+  
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+    
+    
+
+      
+  </script>
+
+</body>
+</html>
